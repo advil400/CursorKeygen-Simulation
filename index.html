@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entropy-based Key Generator</title>
+  <style>
+    body {
+      font-family: monospace;
+    }
+
+    #output {
+      white-space: pre;
+    }
+  </style>
+</head>
+<body>
+  <h1>Entropy-based Key Generator</h1>
+  <p>Move your mouse randomly to generate a key based on your movements.</p>
+  <pre id="output"></pre>
+  <button id="decodeKey">Decode Key</button>
+  <pre id="decodedKeyOutput"></pre>
+  <canvas id="keyVisualization" width="256" height="256"></canvas>
+  <script src="entropy-keygen.js"></script>
+
+
+</body>
+</html>
