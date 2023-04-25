@@ -19,7 +19,7 @@ async function generateKey() {
   const keyData = await crypto.subtle.exportKey('raw', newKey);
   const keyArray = new Uint8Array(keyData);
   const base64Key = btoa(String.fromCharCode(...keyArray));
-  
+
   console.log('Generated key:', keyArray);
 
   return base64Key;
@@ -63,12 +63,12 @@ function drawKeyVisualization(decodedKeyArray) {
     for (let col = 0; col < numCols; col++) {
       const byte = decodedKeyArray[row * numCols + col];
       const color = `hsl(${(byte / 255) * 360}, 50%, 50%)`;
-      
+
       ctx.fillStyle = color;
       ctx.fillRect(col * cellSize, row * cellSize, cellSize, cellSize);
     }
   }
-  
+
   console.log('Decoded key visualization drawn:', decodedKeyArray);
 }
 
